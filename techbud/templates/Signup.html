@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+    {% block content %}
+    <div class="get-started">
+        <h3>Get started by creating an account</h3>
+    </div>
+    <div class="container mt-3 w-25 p-3 bg-dark card rounded-4">
+        <form method="post">
+            {% csrf_token %}
+            <h2 class="heading-2">Signup</h2>
+            <div class="form-group">
+              <label class="label-2 text-white"  for="exampleInputUsername">User Name</label>
+              <input type="text" class="form-control"  placeholder="Enter User Name" name="username">
+            </div>
+            <div class="form-group">
+                <label  class="label-1 text-white" for="exampleInputEmail">Email</label>
+                <input type="email" class="form-control"  placeholder="Enter Email" name="email">
+              </div>
+            <div class="form-group">
+              <label  class="label-3 text-white" for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass1">
+            </div>
+            <div class="form-group">
+                <label  class="label-4 text-white" for="exampleInputPassword2">Confirm Password</label>
+                <input type="password" class="form-control"  placeholder="Password" name="confirm">
+              </div>
+            <button type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Create Account</button>
+            <p><a  style="color: white;" href="/login_logic/">I already have an account</a></p>
+          </form>
+    </div>
+    {% endblock %}
+</body>

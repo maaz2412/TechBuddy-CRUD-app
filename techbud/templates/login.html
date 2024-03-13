@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<body>
+    {% block content %}
+    <div class="container mt-5 w-25  py-4 p-3 bg-dark card rounded-4">
+        <form   method="post">
+            {% csrf_token %}
+            <div class="container-fluid center-div">
+                <h2 class="heading-2">Login</h2>
+            </div>
+            <div class="form-group">
+                <label  class="label-1 text-white" for="exampleInputEmail">User Name</label>
+                <input type="text" class="form-control"  placeholder="Enter user name" id="username" name="username">
+              </div>
+            <div class="form-group">
+              <label class="label-2 text-white"  for="exampleInputUsername">Password</label>
+              <input type="password" class="form-control"  placeholder="Enter Password" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Login</button>
+            <p><a  style=" color: white;" href="/signup/">Donot have an account</a></p>
+    </div>
+    {% endblock %}
+</body>

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+<body style="box-sizing: border-box; margin: 0;
+  padding: 0;">
+    {% block content %}
+<div class="main-body" style="overflow: hidden;">
+  <div class="home-body" style=" padding: 50px; margin: 30px 50px;  display: flex; align-items: center; justify-content: space-between;">
+    <div class="text-body">
+   <h1>Tech<span style="color: green;">Buddy</span></h1>
+   <h3>First time <span style="color: green;">in Pakistan</span></h3>
+   <div class="description" style="margin-top: 20px;">
+    <p>A simple guide to buying tech in Pakistan. Make a smart and knowlegeble tech decision. <br>
+      Can't decide what product suits your budget and requirment?
+      TechBuddy is the answer
+    </p>
+   </div>
+    </div>
+    <div class="img-body " style="mix-blend-mode: multiply;">
+      <img src="{% static 'images/unnamed.jpg' %}" style="width: 300px;" alt="">
+    </div>
+  </div>
+  <div class="features mt-4" style="display: flex; align-items: left; margin-left: 20px;">
+      <h3>Products that you can get help with</h3>
+  </div>
+  <div class="row" style="display: flex; align-items: center; justify-content: space-around; padding: 10px;">
+      <div class="card" style="width: 20rem;">
+          <img src="{% static 'images/smartphone.webp' %}" class="card-img-top"  alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Smart Phones</h5>
+            <p class="card-text">Get all the guidance you need before buying a smartphone.</p>
+            <a href="/smartphone/" class="btn btn-primary">Explore more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'images/smartwatch.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Smart Watches</h5>
+            <p class="card-text">Get all the guidance you need before buying a smartwatch.</p>
+            <a href="#" class="btn btn-primary">Explore more</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <img src="{% static 'images/images.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Laptops</h5>
+            <p class="card-text">Get all the guidance you need before buying a laptop.</p>
+            <a href="#" class="btn btn-primary">Explore more</a>
+          </div>
+        </div>
+    </div>
+    <div class="form" style="display: flex; align-items: center;
+  justify-content: center;  margin-top: 50px; margin-bottom: 30px;">
+  <form action="submit" method="post">
+    <label  style="display: block; margin-bottom: 10px;" for="">Help us improve your experience:</label>
+    <input style="width: 300px; height: 50px;" type="text" name="" id="" placeholder="Your reviews">
+  </form>
+</div> 
+</div>
+
+
+    {% endblock %}
+</body>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<body style="display: flex; background: black; height: 100vh;">
+    {% block content %}
+    <div class="main" style="width: 400px; max-width: 90%; margin: auto;">
+        {% if results %}
+        <h1 style="margin-top: 40px;">Results for <span style="color: green;">'{{ query }}'</span> </h1>
+        <table style="width: 500px; border: solid green 1px; margin-top: 100px; margin-bottom: 100px; height: 100px;">
+            <tr>
+                <th style="border: solid green 1px; background: #D3D3D3; text-align: center;">Brand Name</th>
+                <th style="border: solid green 1px; background: #D3D3D3; text-align: center;">Budget</th>
+                <th  style="border: solid green 1px; background: #D3D3D3; text-align: center;">Device Name</th>
+            </tr>
+            <tr style="border: solid green 1px;">
+                {% for items in results %}
+                <td style="border: solid green 1px; text-align: center;">{{ items.brand_name }}</td>
+                <td style="border: solid green 1px; text-align: center;">{{ items.budget_range}}</td>
+                <td style="border: solid green 1px; text-align: center; ">{{ items.name_phone }}</td>
+                {% endfor %}
+            </tr>
+        </table>    
+    {% else %}
+    <p>Failure!! NO items match '{{query}}'</p>
+    {% endif %}
+    </div>
+    {% endblock %}
+    
+</body>

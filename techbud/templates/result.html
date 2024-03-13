@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<body style="display: flex; height: 100vh; background: #eee;">
+    {% block content %}
+    <div class="table" style="margin: auto; width: 400px; max-width: 90%;"  >
+        <h1 style="margin-top: 50px;">The best smartphone in your  <span style="color: green;">budget is</span> </h1>
+        <table style="width: 500px; border: solid green 1px; margin-top: 100px; margin-bottom: 100px; height: 100px;">
+            <tr style="border: solid green 1px;">
+                <th style="border: solid green 1px; background: #D3D3D3; text-align: center;">Mobile Brand</th>
+                <th style="border: solid green 1px; background: #D3D3D3; text-align: center; ">Price</th>
+                <th style="border: solid green 1px; background: #D3D3D3; text-align: center;">Mobile name</th>
+            </tr>
+            {% for mob in mobile %}
+            <tr style="border: solid green 1px;"> 
+                <td style="border: solid green 1px; text-align: center;">{{ mob.brand_name }}</td>
+                <td style="border: solid green 1px; text-align: center;">{{ mob.budget_range }}</td>
+                <td style="border: solid green 1px; text-align: center;">{{ mob.name_phone }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endblock %}
+</body>
